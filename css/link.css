@@ -1,0 +1,438 @@
+/*Aqui inicia el reciclado*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    --gold: #BEA339;
+    --blue: #7e99cf;
+    --gray: #2E2E34;
+    --withe: #F4F2ED;
+    --dark: #2E2E34;
+}
+
+body {
+    background-color: rgb(219, 219, 219);
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+    background: linear-gradient(to bottom right, #ffffff 10%, #7e99cf 50%, #304d91 85%);
+    width: 100%;
+}
+
+
+/*Barra de color y logo*/
+
+.img-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 6rem;
+    width: 3rem;
+    padding: 0 52.5rem 0 0;
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1rem;
+    margin: 0 1.5rem 0 3.5rem;
+    background-color: var(--gold);
+}
+
+.logo {
+    height: 2rem;
+    width: 2rem;
+}
+
+.logo-a {
+    height: 2rem;
+    width: 2rem;
+}
+
+.logo-normal {
+    height: 5.9rem;
+    width: 26rem;
+}
+
+
+/*Redes Sociales*/
+
+.redes {
+    padding: 3.6rem 3rem;
+}
+
+.redes-top {}
+
+.redes-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link {
+    margin: 0 0.5rem;
+    list-style: none;
+}
+
+.link-a {
+    font-size: 1.5rem;
+    border-radius: 10rem;
+    padding: 0 0.2rem;
+}
+
+.link-a-f {
+    color: rgb(255, 255, 255);
+}
+
+.link-a-y {
+    color: red;
+}
+
+.link-a-i {
+    color: purple;
+}
+
+.link-a-t {
+    color: white;
+}
+
+.link-a-e {
+    color: var(--withe);
+}
+
+.link-a-p {
+    color: black;
+}
+
+.link-a-w {
+    color: rgb(4, 206, 4);
+}
+
+@media (max-width: 800px) {
+    .body {
+        height: auto;
+        width: 100%;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 7rem;
+    }
+    .img-top {
+        width: 90%;
+        height: 3rem;
+        padding: 0.1rem;
+    }
+    .color {
+        padding: 5.1rem 1rem;
+        margin: 0 1rem 0rem 1rem;
+    }
+    .logo {
+        height: 2rem;
+        width: 1rem;
+    }
+    .logo-normal {
+        height: 4rem;
+        width: 19rem;
+        margin: 3.5rem 0rem 0 -18rem;
+    }
+    .redes {
+        margin: 1.5rem 0 0 1rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        height: 7rem;
+    }
+    .img-top {
+        width: 8rem;
+        height: 8rem;
+    }
+    .color {
+        padding: 0rem 1rem;
+        margin: 0rem 2rem 1rem 3rem;
+    }
+    .logo {
+        height: 4rem;
+        width: 4rem;
+    }
+    .redes {
+        margin: 0.3rem 26rem;
+    }
+    .logo-normal {
+        height: 7rem;
+        width: 30rem;
+    }
+    .link-a {
+        font-size: 2rem;
+    }
+}
+
+
+/*Apartir de aqui es el main*/
+
+
+/*Inicio Nav Bar*/
+
+.menu-button {
+    background-color: gray;
+    padding: 0.5rem;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.15rem;
+    width: 96%;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-ul,
+.sub-nav-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 158.25rem;
+}
+
+.nav-ul {
+    background: rgb(53, 53, 53);
+    width: 100%;
+    margin-left: -100%;
+    transition: 0.5s;
+    top: 9.2rem;
+    position: absolute;
+}
+
+.mostrar {
+    margin-left: 0;
+}
+
+.nav-a {
+    display: block;
+    padding: 1.25rem;
+    color: white;
+    font-size: 0.982rem;
+    text-decoration: none;
+}
+
+.sub-nav-ul {
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    width: 100%;
+}
+
+.sub-nav-ul .nav-a {
+    background-color: rgb(19, 19, 19);
+    padding-left: 4rem;
+}
+
+
+/*Inicio Media Querie Nav Bar*/
+
+@media (min-width: 1024px) {
+    .menu-button {
+        display: none;
+    }
+    .nav-ul {
+        margin-left: 0;
+        display: flex;
+        width: 86.99%;
+        margin: 0 5.2rem;
+        top: 6rem;
+        height: 9.1%;
+    }
+    .nav {
+        margin-left: 0.3rem;
+    }
+    .nav-a {
+        padding: 1.3rem 2.209rem;
+        text-align: center;
+    }
+    .nav-a:hover {
+        background-color: #BEA339;
+    }
+    .container-sub-nav {
+        position: relative;
+    }
+    .sub-nav-ul {
+        position: absolute;
+        top: 3.75rem;
+        width: 15rem;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .sub-nav-ul .nav-a {
+        margin-left: 0;
+        padding: 1.3rem 2.128rem;
+    }
+    .container-sub-nav:hover .sub-nav-ul {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 1920px) {
+    .nav {
+        width: 150rem;
+    }
+    .nav-ul {
+        margin: 1rem 4.7rem;
+        width: 88.99%;
+        height: 5.7%;
+    }
+    .nav-a {
+        padding: 1rem 3.773rem;
+        font-size: 1.193rem;
+        /*1.1932rem*/
+    }
+    .sub-nav-ul {
+        top: 3.4rem;
+        width: 13.25rem;
+    }
+}
+
+
+/*Fin Media Querie Nav Bar*/
+
+
+/*Fin Nav Bar*/
+
+
+/*Footer*/
+
+.footer {
+    background: var(--blue);
+    width: 100%;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.bar {
+    background: var(--gold);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 1920px) {
+    .footer {
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 1.3rem;
+    }
+    .bar {
+        padding: 0.8rem 0;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/*Aqui acaba el reciclado*/
+
+
+/*Aqui inicia el Container*/
+
+.container {
+    text-align: center;
+    margin: 0rem 5.5rem;
+    background-color: #ffffff;
+    padding: 6rem 0;
+}
+
+.title-container {
+    font-size: 2.25rem;
+    border-bottom: 0.2rem solid #2E2E34;
+    padding-bottom: 1rem;
+    margin: 0rem 5rem;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    height: 8rem;
+    border-bottom: 0.2rem solid black;
+    margin: 2rem 5rem 0rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.card-img {
+    height: 8rem;
+    width: 10rem;
+    margin: 0.3rem;
+}
+
+.content-card {
+    height: 10rem;
+    overflow: hidden;
+    width: 100%;
+    text-align: justify;
+}
+
+.title-card {
+    margin-right: 3rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.content-text {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+@media (max-width: 800px) {
+    .container {
+        margin: 1.5rem 2.5rem;
+    }
+    .title-container {
+        font-size: 2rem;
+    }
+    .card {
+        height: 6rem;
+        margin-bottom: 1rem;
+    }
+    .card-img {
+        height: 6rem;
+        width: 8rem;
+        margin: 0;
+    }
+    .content-card {
+        height: 8rem;
+        width: 80%;
+    }
+    .title-card {
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .content-text {
+        margin-left: 0.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        margin: 0 8.1rem 0 5rem;
+    }
+    .card-img {
+        margin-top: -1rem;
+        padding: 0;
+        height: 9rem;
+        width: 32rem;
+    }
+}
